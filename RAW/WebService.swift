@@ -8,14 +8,14 @@
 
 import Foundation
 
-class WebService: NSObject {
+class WebService {
     
     enum JSONError: String, Error {
         case NoData = "ERROR: no data"
         case ConversionFailed = "ERROR: conversion from JSON failed"
     }
     
-    func fetchRawData(sucess:@escaping(_ userData: [RawModel]) -> Void, failure: @escaping(_ failuremessage: String) -> Void){
+    func fetchRawData(sucess:@escaping(_ userData: [PostModel]) -> Void, failure: @escaping(_ failuremessage: String) -> Void){
         guard let endpoint = URL.init(string:ServerConstants.APIEndPoint) else {
             print("Error creating endpoint")
             return failure("URL error")
@@ -27,7 +27,7 @@ class WebService: NSObject {
                     throw JSONError.NoData
                 }
                 let jsonDecoder = JSONDecoder()
-                let arrRaw = try jsonDecoder.decode([RawModel].self, from: data)
+                let arrRaw = try jsonDecoder.decode([PostModel].self, from: data)
                 sucess(arrRaw)
             } catch let error as JSONError {
                 print(error.rawValue)

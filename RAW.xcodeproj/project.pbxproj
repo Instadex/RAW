@@ -13,7 +13,7 @@
 		0763325620F8F3D70051689D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0763325520F8F3D70051689D /* Assets.xcassets */; };
 		0763325920F8F3D70051689D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0763325720F8F3D70051689D /* LaunchScreen.storyboard */; };
 		0763326120F8F45B0051689D /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763326020F8F45B0051689D /* WebService.swift */; };
-		0763326320F8F7EC0051689D /* RawModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763326220F8F7EC0051689D /* RawModel.swift */; };
+		0763326320F8F7EC0051689D /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763326220F8F7EC0051689D /* PostModel.swift */; };
 		0763326520F8F8A60051689D /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763326420F8F8A60051689D /* GlobalConstants.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		0763325820F8F3D70051689D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0763325A20F8F3D70051689D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0763326020F8F45B0051689D /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
-		0763326220F8F7EC0051689D /* RawModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawModel.swift; sourceTree = "<group>"; };
+		0763326220F8F7EC0051689D /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		0763326420F8F8A60051689D /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +67,7 @@
 				0763325720F8F3D70051689D /* LaunchScreen.storyboard */,
 				0763325A20F8F3D70051689D /* Info.plist */,
 				0763326020F8F45B0051689D /* WebService.swift */,
-				0763326220F8F7EC0051689D /* RawModel.swift */,
+				0763326220F8F7EC0051689D /* PostModel.swift */,
 				0763326420F8F8A60051689D /* GlobalConstants.swift */,
 			);
 			path = RAW;
@@ -144,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0763326320F8F7EC0051689D /* RawModel.swift in Sources */,
+				0763326320F8F7EC0051689D /* PostModel.swift in Sources */,
 				0763326120F8F45B0051689D /* WebService.swift in Sources */,
 				0763326520F8F8A60051689D /* GlobalConstants.swift in Sources */,
 				0763325120F8F3D50051689D /* ViewController.swift in Sources */,

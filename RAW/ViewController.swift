@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var dataArr : [RawModel] = []
+    var posts : [PostModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +21,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func fetchDataWithAPI(){
         WebService().fetchRawData(sucess:{[weak self](userData) in
-           
             DispatchQueue.main.async {[weak self] () -> Void in
                 guard let `self` = self else {return}
-                self.dataArr = userData
+                self.posts = userData
                 self.tableView.reloadData()
             }
             }, failure:{[weak self](error) in
@@ -35,27 +34,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         })
     }
     
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension ViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
     }
     
-    //MARK: UITableVewDataSource
-    
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArr.count
-    }
-    
-     func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.numberOfLines = 0
-        if let title = dataArr[indexPath.row].title , let id = dataArr[indexPath.row].id{
+        if let title = posts[indexPath.row].title , let id = posts[indexPath.row].id{
             cell.textLabel?.text = "\(title) + \(id)"
         }else{
             cell.textLabel?.text = "No Data"
@@ -64,7 +59,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
         
     }
-
-
+    
 }
 
