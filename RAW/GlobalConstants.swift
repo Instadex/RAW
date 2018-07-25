@@ -11,3 +11,4 @@ import Foundation
 struct ServerConstants {
     static let APIEndPoint : String = "https://jsonplaceholder.typicode.com/posts"
 }
+

@@ -46,15 +46,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return 1
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.numberOfLines = 0
-        if let title = posts[indexPath.row].title , let id = posts[indexPath.row].id{
+    fileprivate func updateCelldata(_ indexPath: IndexPath, _ cell: UITableViewCell) {
+         cell.textLabel?.numberOfLines = 0
+        let extractedExpr: String? = posts[indexPath.row].title
+        if let title = extractedExpr , let id = posts[indexPath.row].id{
             cell.textLabel?.text = "\(title) + \(id)"
         }else{
             cell.textLabel?.text = "No Data"
         }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        updateCelldata(indexPath, cell)
         
         return cell
         
