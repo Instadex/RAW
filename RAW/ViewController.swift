@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var posts : [PostModel] = []
+    var posts : [PostModel] = [PostModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,24 +19,40 @@ class ViewController: UIViewController {
         fetchDataWithAPI()
     }
     
+    
     func fetchDataWithAPI(){
-        WebService().fetchRawData(sucess:{[weak self](userData) in
+        
+        WebService().getPostsData(output: {[weak self](userdata,errorMessaage) in
             DispatchQueue.main.async {[weak self] () -> Void in
-                guard let `self` = self else {return}
-                self.posts = userData
-                self.tableView.reloadData()
+                guard let `self` = self else{return}
+                if errorMessaage.count == 0 {
+                    self.posts = userdata
+                    self.tableView.reloadData()
+                }else {
+                    self.displayAlert(title: "Alert", message: errorMessaage)
+                }
+
             }
-            }, failure:{[weak self](error) in
-                guard let `self` = self else {return}
-                let alert = UIAlertController(title:"Alert", message:error, preferredStyle:.alert)
-                alert.addAction(UIAlertAction.init(title:"ok", style:.cancel, handler:nil))
-                self.present(alert, animated: true, completion: nil)
         })
+        
     }
+    
+    
+    func displayAlert(title: String, message: String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title:title, message:message, preferredStyle:.alert)
+            alert.addAction(UIAlertAction.init(title:"ok", style:.cancel, handler:nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+}
+
+extension ViewController: UITableViewDelegate{
     
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource{
+extension ViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
