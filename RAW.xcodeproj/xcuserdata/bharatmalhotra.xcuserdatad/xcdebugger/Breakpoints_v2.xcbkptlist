@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RAW/WebService.swift"
-            timestampString = "555508204.749383"
+            filePath = "RAW/PostViewController.swift"
+            timestampString = "555524622.767692"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "getPostsData(output:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "fetchDataWithAPI()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RAW/WebService.swift"
-            timestampString = "555508204.75029"
+            timestampString = "555524622.768487"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getPosts(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RAW/WebService.swift"
+            timestampString = "555524622.768612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
             endingLineNumber = "27"
-            landmarkName = "getPostsData(output:)"
+            landmarkName = "getPosts(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
