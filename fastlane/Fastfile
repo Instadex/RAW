@@ -22,8 +22,8 @@ platform :ios do
   end
 end
 
-lane :beta do
-  get_certificates           # invokes cert
-  get_provisioning_profile   # invokes sigh
+lane :release do
+  sync_code_signing
+  disable_automatic_code_signing(path: "/Users/jenkins/Desktop/Demo/Raw/RAW.xcodeprojct")
   build_app
 end
