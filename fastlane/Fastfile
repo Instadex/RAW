@@ -24,6 +24,6 @@ end
 
 lane :release do
   sync_code_signing
-  disable_automatic_code_signing(path: "/Users/jenkins/Desktop/Demo/Raw/RAW.xcodeprojct")
+  disable_automatic_code_signing(path: "RAW.xcodeprojct")
   build_app
 end
