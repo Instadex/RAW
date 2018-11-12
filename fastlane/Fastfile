@@ -23,7 +23,7 @@ platform :ios do
 end
 lane :beta do
   scan
-  gym(scheme: "RAW", export_method: "ad-hoc")
+  gym(scheme: "RAW", export_method: "enterprise")
 end
 
 # error block is executed when a error occurs
