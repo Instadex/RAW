@@ -21,9 +21,18 @@ platform :ios do
     capture_screenshots(scheme: "RAW")
   end
 end
+lane :beta do
+  scan
+  gym(scheme: "RAW")
+end
 
-lane :release do
-  sync_code_signing
-  disable_automatic_code_signing(path: "RAW.xcodeprojct")
-  build_app
+# error block is executed when a error occurs
+error do |lane, exception|
+  slack(
+    # message with short human friendly message
+    message: exception.to_s, 
+    success: false, 
+    # Output containing extended log output
+    payload: { "Output" => exception.error_info.to_s } 
+  )
 end
