@@ -10,31 +10,29 @@ import Foundation
 
 class WebService {
     
-    enum JSONError: String, Error {
+    enum ServiceError: String, Error {
         case NoData = "ERROR: no data"
         case ConversionFailed = "ERROR: conversion from JSON failed"
+        case urlInvalid = "ERROR: the URL is invalid"
     }
     
-    func fetchRawData(sucess:@escaping(_ userData: [PostModel]) -> Void, failure: @escaping(_ failuremessage: String) -> Void){
+    func getPosts(completion: @escaping(_ userData: [Posts],_ failureMessage: Error?) -> Void){
+        var posts = [Posts]()
         guard let endpoint = URL.init(string:ServerConstants.APIEndPoint) else {
             print("Error creating endpoint")
-            return failure("URL error")
+            return completion(posts, ServiceError.urlInvalid)
         }
         let request = URLRequest(url:endpoint)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             do {
                 guard let data = data else {
-                    throw JSONError.NoData
+                    throw ServiceError.NoData
                 }
-                let jsonDecoder = JSONDecoder()
-                let arrRaw = try jsonDecoder.decode([PostModel].self, from: data)
-                sucess(arrRaw)
-            } catch let error as JSONError {
-                print(error.rawValue)
-                failure(error.rawValue)
-            } catch let error as NSError {
-                print(error.localizedDescription)
-                failure(error.localizedDescription)
+                posts = try JSONDecoder().decode([Posts].self, from: data)
+                completion(posts,nil)
+            } catch {
+                print(error)
+                completion(posts,error)
             }
             }.resume()
     }

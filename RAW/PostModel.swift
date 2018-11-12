@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PostModel: Codable {
+struct Posts: Codable {
     let userid : Int?
     let id : Int?
     let title : String?
