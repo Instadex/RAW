@@ -64,13 +64,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		072A9F23211C7BC000FA09B8 /* NetworkLayer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetworkLayer;
-			sourceTree = "<group>";
-		};
 		0763324220F8F3D50051689D = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +85,6 @@
 		0763324D20F8F3D50051689D /* RAW */ = {
 			isa = PBXGroup;
 			children = (
-				072A9F23211C7BC000FA09B8 /* NetworkLayer */,
 				0763324E20F8F3D50051689D /* AppDelegate.swift */,
 				0763325020F8F3D50051689D /* PostViewController.swift */,
 				0763325220F8F3D50051689D /* Main.storyboard */,
