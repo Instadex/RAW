@@ -15,7 +15,6 @@
 		0763326120F8F45B0051689D /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763326020F8F45B0051689D /* WebService.swift */; };
 		0763326320F8F7EC0051689D /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763326220F8F7EC0051689D /* PostModel.swift */; };
 		0763326520F8F8A60051689D /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763326420F8F8A60051689D /* GlobalConstants.swift */; };
-		076A6CF6210B54790037ED3F /* Custom Export List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 076A6CF5210B54790037ED3F /* Custom Export List.plist */; };
 		0784D7D121133AC500441E2A /* RAWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0784D7D021133AC500441E2A /* RAWUITests.swift */; };
 		0784D7D921133AF100441E2A /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0784D7D821133AF100441E2A /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		0763326020F8F45B0051689D /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		0763326220F8F7EC0051689D /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		0763326420F8F8A60051689D /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
-		076A6CF5210B54790037ED3F /* Custom Export List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Custom Export List.plist"; sourceTree = "<group>"; };
 		0784D7CE21133AC500441E2A /* RAWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RAWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0784D7D021133AC500441E2A /* RAWUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAWUITests.swift; sourceTree = "<group>"; };
 		0784D7D221133AC500441E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 		0763324220F8F3D50051689D = {
 			isa = PBXGroup;
 			children = (
-				076A6CF5210B54790037ED3F /* Custom Export List.plist */,
 				0763324D20F8F3D50051689D /* RAW */,
 				0784D7CF21133AC500441E2A /* RAWUITests */,
 				0763324C20F8F3D50051689D /* Products */,
@@ -203,7 +200,6 @@
 				0763325920F8F3D70051689D /* LaunchScreen.storyboard in Resources */,
 				0763325620F8F3D70051689D /* Assets.xcassets in Resources */,
 				0763325420F8F3D50051689D /* Main.storyboard in Resources */,
-				076A6CF6210B54790037ED3F /* Custom Export List.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
