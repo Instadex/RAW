@@ -21,18 +21,20 @@ platform :ios do
     capture_screenshots(scheme: "RAW")
   end
 end
-lane :beta do
-  scan
-  gym(scheme: "RAW", export_method: "enterprise")
-end
 
-# error block is executed when a error occurs
-error do |lane, exception|
-  slack(
-    # message with short human friendly message
-    message: exception.to_s, 
-    success: false, 
-    # Output containing extended log output
-    payload: { "Output" => exception.error_info.to_s } 
-  )
+lane :CD do |values|
+ 
+    gym(scheme: 'RAW', project: "TruthOrDare.xcodeproj", clean: true, silent: true, include_bitcode: false, export_method: 'enterprise')
+
+hockey(
+	api_token: "30aafa2032474acdb26209f4e80eff06",
+	ipa: "./RAW.ipa",
+	notify: "1",
+	notes: "Changelog"
+)
+ 
+    emails = values[:bharat.malhotra@mobileprogramming.net] ? values[:udit.madan@mobileprogramming.net] : ['[email]'] # You can list more emails here
+    groups = values[:test_email] ? nil : nil # You can define groups on the web and reference them here
+ 
+ 
 end
