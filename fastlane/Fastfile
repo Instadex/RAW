@@ -32,9 +32,4 @@ hockey(
 	notify: "1",
 	notes: "Changelog"
 )
- 
-    emails = values[:bharat.malhotra@mobileprogramming.net] ? values[:udit.madan@mobileprogramming.net] : ['[email]'] # You can list more emails here
-    groups = values[:test_email] ? nil : nil # You can define groups on the web and reference them here
- 
- 
 end
