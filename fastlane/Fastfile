@@ -18,7 +18,7 @@ default_platform(:ios)
 platform :ios do
   desc "Generate new localized screenshots"
   lane :screenshots do
-    capture_screenshots(scheme: "RAW")
+    capture_screenshots(scheme: "RAW_two")
   end
 end
 
@@ -28,7 +28,7 @@ lane :CD do |values|
 
 hockey(
 	api_token: "30aafa2032474acdb26209f4e80eff06",
-	ipa: "./RAW.ipa",
+	ipa: "./RAW_two.ipa",
 	notify: "1",
 	notes: "Changelog"
 )
