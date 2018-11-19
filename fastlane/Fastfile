@@ -28,7 +28,7 @@ lane :CD do |values|
 
 hockey(
 	api_token: "30aafa2032474acdb26209f4e80eff06",
-	ipa: "./RAW_two.ipa",
+	ipa: "./RAW.ipa",
 	notify: "1",
 	notes: "Changelog"
 )
