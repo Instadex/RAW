@@ -24,7 +24,7 @@ end
 
 lane :CD do |values|
  
-    gym(scheme: 'RAW', project: "RAW.xcodeproj", clean: true, silent: true, include_bitcode: false, export_method: 'enterprise')
+    gym(scheme: 'RAW', project: "RAW.xcodeproj", clean: true, silent: true, include_bitcode: false, export_method: 'ad-hoc')
 
 hockey(
 	api_token: "30aafa2032474acdb26209f4e80eff06",
