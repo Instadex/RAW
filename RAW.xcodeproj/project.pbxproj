@@ -17,6 +17,14 @@
 		0763326520F8F8A60051689D /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763326420F8F8A60051689D /* GlobalConstants.swift */; };
 		0784D7D121133AC500441E2A /* RAWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0784D7D021133AC500441E2A /* RAWUITests.swift */; };
 		0784D7D921133AF100441E2A /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0784D7D821133AF100441E2A /* SnapshotHelper.swift */; };
+		07E9A58321A2F59600861E29 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763326220F8F7EC0051689D /* PostModel.swift */; };
+		07E9A58421A2F59600861E29 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763326020F8F45B0051689D /* WebService.swift */; };
+		07E9A58521A2F59600861E29 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763326420F8F8A60051689D /* GlobalConstants.swift */; };
+		07E9A58621A2F59600861E29 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763325020F8F3D50051689D /* PostViewController.swift */; };
+		07E9A58721A2F59600861E29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0763324E20F8F3D50051689D /* AppDelegate.swift */; };
+		07E9A58A21A2F59600861E29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0763325720F8F3D70051689D /* LaunchScreen.storyboard */; };
+		07E9A58B21A2F59600861E29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0763325520F8F3D70051689D /* Assets.xcassets */; };
+		07E9A58C21A2F59600861E29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0763325220F8F3D50051689D /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,8 @@
 		0784D7D021133AC500441E2A /* RAWUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAWUITests.swift; sourceTree = "<group>"; };
 		0784D7D221133AC500441E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0784D7D821133AF100441E2A /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		07E9A59021A2F59600861E29 /* RAW_two.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAW_two.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E9A59121A2F59700861E29 /* RAW copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RAW copy-Info.plist"; path = "/Users/bharatmalhotra/Documents/Raw/RAW copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +71,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07E9A58821A2F59600861E29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,6 +87,7 @@
 				0763324D20F8F3D50051689D /* RAW */,
 				0784D7CF21133AC500441E2A /* RAWUITests */,
 				0763324C20F8F3D50051689D /* Products */,
+				07E9A59121A2F59700861E29 /* RAW copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +96,7 @@
 			children = (
 				0763324B20F8F3D50051689D /* RAW.app */,
 				0784D7CE21133AC500441E2A /* RAWUITests.xctest */,
+				07E9A59021A2F59600861E29 /* RAW_two.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +165,23 @@
 			productReference = 0784D7CE21133AC500441E2A /* RAWUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		07E9A58121A2F59600861E29 /* RAW_two */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07E9A58D21A2F59600861E29 /* Build configuration list for PBXNativeTarget "RAW_two" */;
+			buildPhases = (
+				07E9A58221A2F59600861E29 /* Sources */,
+				07E9A58821A2F59600861E29 /* Frameworks */,
+				07E9A58921A2F59600861E29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RAW_two;
+			productName = RAW;
+			productReference = 07E9A59021A2F59600861E29 /* RAW_two.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -179,6 +215,7 @@
 			projectRoot = "";
 			targets = (
 				0763324A20F8F3D50051689D /* RAW */,
+				07E9A58121A2F59600861E29 /* RAW_two */,
 				0784D7CD21133AC500441E2A /* RAWUITests */,
 			);
 		};
@@ -199,6 +236,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9A58921A2F59600861E29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E9A58A21A2F59600861E29 /* LaunchScreen.storyboard in Resources */,
+				07E9A58B21A2F59600861E29 /* Assets.xcassets in Resources */,
+				07E9A58C21A2F59600861E29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +270,18 @@
 			files = (
 				0784D7D121133AC500441E2A /* RAWUITests.swift in Sources */,
 				0784D7D921133AF100441E2A /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9A58221A2F59600861E29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E9A58321A2F59600861E29 /* PostModel.swift in Sources */,
+				07E9A58421A2F59600861E29 /* WebService.swift in Sources */,
+				07E9A58521A2F59600861E29 /* GlobalConstants.swift in Sources */,
+				07E9A58621A2F59600861E29 /* PostViewController.swift in Sources */,
+				07E9A58721A2F59600861E29 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +515,48 @@
 			};
 			name = Release;
 		};
+		07E9A58E21A2F59600861E29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 2KAL3NND99;
+				INFOPLIST_FILE = "RAW copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.distribution.rawtwo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3a6bdf4b-8946-482e-a8c6-093a6910e659";
+				PROVISIONING_PROFILE_SPECIFIER = "Distribution OLD Identifier Profile";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07E9A58F21A2F59600861E29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 2KAL3NND99;
+				INFOPLIST_FILE = "RAW copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.distribution.rawtwo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3a6bdf4b-8946-482e-a8c6-093a6910e659";
+				PROVISIONING_PROFILE_SPECIFIER = "Distribution OLD Identifier Profile";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -482,6 +583,15 @@
 			buildConfigurations = (
 				0784D7D621133AC500441E2A /* Debug */,
 				0784D7D721133AC500441E2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07E9A58D21A2F59600861E29 /* Build configuration list for PBXNativeTarget "RAW_two" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E9A58E21A2F59600861E29 /* Debug */,
+				07E9A58F21A2F59600861E29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
